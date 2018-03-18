@@ -6,6 +6,7 @@ const path = require('path');
 const log = require('electron-log');
 const { Menu, Tray } = require('electron');
 const getAppIco = require('./getAppIco');
+const appJson = require('../app.json');
 
 class SystemTray extends Tray {
   constructor(options) {
@@ -24,7 +25,7 @@ class SystemTray extends Tray {
 
   initializeMenus() {
     // tooltip
-    this.setToolTip('Dtray');
+    this.setToolTip(appJson.productName);
     // context menu
     this.setContextMenu(Menu.buildFromTemplate([{
       label: 'Open',

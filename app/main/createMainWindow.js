@@ -6,6 +6,7 @@ const url = require('url');
 const path = require('path');
 const { BrowserWindow } = require('electron');
 const getAppIco = require('./getAppIco');
+const appJson = require('../app.json');
 
 let mainWindow;
 
@@ -18,6 +19,7 @@ const createMainWindow = ({
   }
 
   mainWindow = new BrowserWindow({
+    title: appJson.productName,
     icon: getAppIco(),
     width: 300,
     height: 500,
