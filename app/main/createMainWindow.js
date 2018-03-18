@@ -51,6 +51,16 @@ const createMainWindow = ({
     })
   );
 
+  eventSubscriptions.push(
+    mainWindow.onEx('close', (ev) => {
+      if (!trayState.quitRequested) {
+        ev.preventDefault();
+        mainWindow.hide();
+        return;
+      }
+    })
+  );
+
   mainWindow.on('closed', () => {
     eventSubscriptions.forEach((subscription) => {
       subscription.dispose();
