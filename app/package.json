@@ -1,0 +1,21 @@
+{
+  "name": "dtray",
+  "version": "1.0.0",
+  "description": "yundangnet system tray desktop application",
+  "main": "main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . --rc-dev-run --enable-logging"
+  },
+  "author": "Rulee Chen",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  },
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "electron-log": "^2.2.14",
+    "electron-store": "^1.3.0",
+    "os-locale": "^2.1.0"
+  }
+}

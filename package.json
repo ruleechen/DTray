@@ -1,0 +1,24 @@
+{
+  "name": "dtray",
+  "version": "1.0.0",
+  "description": "yundangnet system tray desktop application",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd app & npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruleechen/DTray.git"
+  },
+  "keywords": [
+    "yundangnet",
+    "tray"
+  ],
+  "author": "Rulee Chen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ruleechen/DTray/issues"
+  },
+  "homepage": "https://github.com/ruleechen/DTray#readme"
+}

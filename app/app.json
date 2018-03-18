@@ -1,0 +1,9 @@
+{
+  "productName": "DTray",
+  "buildEnvs": [
+    "dev",
+    "test",
+    "prod"
+  ],
+  "buildEnv": "test"
+}
