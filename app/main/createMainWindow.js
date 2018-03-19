@@ -55,7 +55,7 @@ const createMainWindow = ({
 
   eventSubscriptions.push(
     mainWindow.onEx('close', (ev) => {
-      if (!trayState.quitRequested) {
+      if (!appEnv.quitRequested) {
         ev.preventDefault();
         mainWindow.hide();
         return;

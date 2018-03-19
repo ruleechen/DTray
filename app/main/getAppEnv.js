@@ -38,6 +38,7 @@ const isAutoLaunchEnabled = ({ app }) => {
 const getAppEnv = ({
   app,
 }) => {
+  let _quitRequested = false;
   const beforeQuitActions = [];
   const installerPath = getInstallerPath({ app });
 
@@ -61,6 +62,9 @@ const getAppEnv = ({
       }
       return 'dev';
     },
+    get quitRequested() {
+      return _quitRequested;
+    },
     onBeforeQuit(source, action) {
       beforeQuitActions.push({
         source,
@@ -71,6 +75,7 @@ const getAppEnv = ({
 
   // autoUpdater only emit "before-quit" event on app
   app.on('before-quit', () => {
+    _quitRequested = true;
     beforeQuitActions.forEach(({ source, action }) => {
       try {
         action();

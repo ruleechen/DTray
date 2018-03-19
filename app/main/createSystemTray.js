@@ -12,7 +12,6 @@ class SystemTray extends Tray {
   constructor(options) {
     super(options);
 
-    this._quitRequested = false;
     this._eventSubscriptions = [];
 
     this.initializeMenus();
@@ -41,14 +40,9 @@ class SystemTray extends Tray {
   }
 
   destroy() {
-    this._quitRequested = true;
     this._eventSubscriptions.forEach((subscription) => {
       subscription.dispose();
     });
-  }
-
-  get quitRequested() {
-    return !!this._quitRequested;
   }
 }
 
