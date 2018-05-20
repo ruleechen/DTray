@@ -2,7 +2,7 @@
 * app entrance
 */
 
-require('./runtimeEx')();
+require('../lib/runtimeEx')();
 const { app } = require('electron');
 
 /**

@@ -5,11 +5,11 @@
 const getAppEnv = require('./getAppEnv');
 const createSystemTray = require('./createSystemTray');
 const createMainWindow = require('./createMainWindow');
+const puppeteer = require('./puppeteer');
 
 module.exports = ({
   app,
 }) => {
-
   /**
    * app env
    */
@@ -30,5 +30,12 @@ module.exports = ({
   const mainWindow = createMainWindow({
     appEnv,
     trayState,
+  });
+
+  /**
+   * puppeteer server
+   */
+  const server = puppeteer({
+    appEnv,
   });
 };

@@ -10,12 +10,13 @@
   "author": "Rulee Chen",
   "license": "UNLICENSED",
   "devDependencies": {
-    "electron": "^1.8.4"
+    "electron": "^2.0.1"
   },
   "dependencies": {
     "electron-is-dev": "^0.3.0",
     "electron-log": "^2.2.14",
     "electron-store": "^1.3.0",
-    "os-locale": "^2.1.0"
+    "os-locale": "^2.1.0",
+    "puppeteer": "^1.4.0"
   }
 }
